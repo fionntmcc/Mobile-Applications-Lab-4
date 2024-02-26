@@ -1,0 +1,19 @@
+<!--
+    *ngfor loop acts as a foreach loop but requires the CommonModule import
+-->
+<ol>
+    <li *ngFor="let president of presidents">
+        {{president.name}}
+        {{president.term}}
+    </li>
+</ol>
+
+<!--
+    @for loop acts as a foreach loop but does not require an import
+-->
+@for (president of presidents; track president) {
+    <li>
+        {{president.name}}
+        {{president.term}}
+    </li>
+}
